@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cors(corsOptions));
 
+app.use("/robotLocation", require("./routes/robot_location"));
 app.all("*", (req, res) => {
   console.log("Request received");
 });
